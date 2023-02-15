@@ -3,6 +3,7 @@ import ContactRow from "./ContactRow";
 function ContactList(props) {
   const contacts = props.contact;
   const setContact = props.setContact;
+  const selectContact = props.selectContact
 
   return (
     <table>
@@ -13,7 +14,7 @@ function ContactList(props) {
           <th>Email</th>
         </tr>
         {contacts.map((e) => {
-          return <ContactRow key={e.id} contact={e} setContact={setContact} />;
+          return <ContactRow key={e.id} contact={e} selectContact={selectContact} setContact={setContact} />;
         })}
       </tbody>
     </table>
